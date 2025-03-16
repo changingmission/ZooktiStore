@@ -3,7 +3,12 @@
     "@tailwindcss/cli": "^4.0.14",
     "tailwindcss": "^4.0.14"
   },
+  "scripts": {
+    "watch": "npx @tailwindcss/cli -i ./wwwroot/app.css -o ./wwwroot/app.min.css --watch",
+    "start": "concurrently \"dotnet watch run\" \"npx @tailwindcss/cli -i ./wwwroot/app.css -o ./wwwroot/app.min.css --watch\""
+  },
   "devDependencies": {
+    "concurrently": "^9.1.2",
     "daisyui": "^5.0.4"
   }
 }
